@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# *** Terribly Tiny Tales Assignment By Likhit***
+ ============= ============= =============
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This assignment was given by TERRIBLY TINY TALES for the recruitment process. This is a simple web application built using React that allows users to count the words in a text file from https://terriblytinytaleslikhit.netlify.app/ and display the top 20 most frequently occurring words in a bar chart. The user can also export the data as a CSV file.
 
-## Available Scripts
 
-In the project directory, you can run:
+### `Deployment link`
+  https://terriblytinytaleslikhit.netlify.app/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Libraries and Plugins Used`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*  React - a JavaScript library for building user interfaces
+*  axios - used to communicate with the backend
+*  recharts - a charting library for React that makes it easy to create reusable charts
+*  loadash - provides functional programming helpers without extending any built-in objects
+*  file-saver - enables you to save file in machine
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Components`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The App component contains all the main logic and functionality of the app. It has three states:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* content: This state holds the contents of the text file fetched from the API.
+* wordCounts: This state holds an object containing the word counts for each word in the text file.
+* error: This state holds any error that occurs during the fetch operation.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Explanation`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In this code, we import the necessary dependencies, including axios for making HTTP requests, lodash for word frequency calculations, recharts for creating the histogram chart, and file-saver for downloading the CSV file.
 
-## Learn More
+The fetchData function is triggered when the "Submit" button is clicked. It fetches the contents of the specified URL, parses the content to find word occurrences, sorts the data, and selects the top 20 words. The resulting data is then set in the state.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The handleExport function is called when the "Export" button is clicked. It converts the data into a CSV format and initiates the download of the file.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The return statement renders the "Submit" button and, if data is available, the histogram chart and the "Export"
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
