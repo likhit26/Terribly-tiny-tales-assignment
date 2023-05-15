@@ -1,4 +1,4 @@
-# *** Terribly Tiny Tales Assignment By Likhit***
+# *** Terribly Tiny Tales Assignment By Likhit Varma M***
  ============= ============= =============
 
 This assignment was given by TERRIBLY TINY TALES for the recruitment process. This is a simple web application built using React that allows users to count the words in a text file from https://terriblytinytaleslikhit.netlify.app/ and display the top 20 most frequently occurring words in a bar chart. The user can also export the data as a CSV file.
